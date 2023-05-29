@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create a new post</title>
+  </head>
+  <body>
+    <h1>Create a new post</h1>
+    <form action="/create-post/" method="POST"> <!-- define the URL and method for submitting data -->
+      {% csrf_token %} <!-- add a security token -->
+      <label for="title">Title:</label> <!-- add a label for the title input -->
+      <input type="text" id="title" name="title" required>
+      <textarea id="content" name="content" rows="10" cols="50" required></textarea>      
+      <input type="submit" value="Create"> <!-- add a submit button -->
+    </form>
+  </body>
+</html>

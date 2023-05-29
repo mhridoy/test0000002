@@ -1,0 +1,16 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Django Project</title>
+  </head>
+  <body>
+    <h1>My Django Project</h1>
+    <ul>
+      {% for post in posts %} <!-- loop through all posts passed by the view -->
+      <li>{{ post.title }} - {{ post.content }}</li> <!-- display post title and date -->
+      {% endfor %}
+    </ul>
+  </body>
+</html>
